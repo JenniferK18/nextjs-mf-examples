@@ -9,12 +9,9 @@ const nextConfig = {
 
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'remote',
+        name: 'remote2',
         filename: `static/${remoteDir}/remoteEntry.js`,
         extraOptions: {},
-        remotes: {
-          remote: `remote2@https://[environment]/_next/static/${remoteDir}/remoteEntry.js`,
-        },
         exposes: {
           './table': './components/table/table',
         },

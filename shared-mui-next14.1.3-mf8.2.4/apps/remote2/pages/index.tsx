@@ -89,8 +89,4 @@ export function Index() {
   );
 }
 
-export const getServerSideProps = () => {
-  return { props: { envVars: process.env } };
-}
-
 export default Index;

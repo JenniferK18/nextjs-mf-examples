@@ -12,9 +12,6 @@ const nextConfig = {
         name: 'remote',
         filename: `static/${remoteDir}/remoteEntry.js`,
         extraOptions: {},
-        remotes: {
-          remote2: `remote2@https://[environment]/_next/static/${remoteDir}/remoteEntry.js`,
-        },
         exposes: {
           './table': './components/table/table',
         },

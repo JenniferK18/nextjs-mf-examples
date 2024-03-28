@@ -13,7 +13,7 @@ const nextConfig = {
         filename: `static/${remoteDir}/remoteEntry.js`,
         extraOptions: {},
         remotes: {
-          remote: `remote2@https://[environment]/_next/static/${remoteDir}/remoteEntry.js`,
+          remote2: `remote2@https://[environment]/_next/static/${remoteDir}/remoteEntry.js`,
         },
         exposes: {
           './table': './components/table/table',

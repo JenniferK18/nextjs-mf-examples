@@ -112,7 +112,7 @@ export function Index({ envVar }: { envVar: string }) {
 }
 
 export const getServerSideProps = () => {
-  return { props: { envVar: process.env.NEXT_PUBLIC_REMOTE1_URL } };
+  return { props: { envVar: process.env.NEXT_PUBLIC_REMOTE_URL } };
 }
 
 export default Index;

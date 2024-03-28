@@ -1,4 +1,3 @@
-import React from 'react';
 import muipkg from '@mui/material/package.json';
 import styles from './table.module.css';
 import Button from '@mui/material/Button';
@@ -12,7 +11,6 @@ export type TableData = {
 /* eslint-disable-next-line */
 export interface TableProps {
   data: TableData[];
-  envVar: string;
 }
 
 export function Table({ data }: TableProps) {

@@ -1,3 +1,4 @@
+import React from 'react';
 import muipkg from '@mui/material/package.json';
 import styles from './table.module.css';
 import Button from '@mui/material/Button';

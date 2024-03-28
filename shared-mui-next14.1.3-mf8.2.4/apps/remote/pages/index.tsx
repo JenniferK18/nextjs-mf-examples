@@ -89,8 +89,4 @@ export function Index() {
   );
 }
 
-export const getServerSideProps = () => {
-  return { props: { envVar: process.env.NEXT_PUBLIC_REMOTE2_URL } };
-}
-
 export default Index;

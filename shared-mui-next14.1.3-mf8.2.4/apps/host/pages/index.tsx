@@ -27,7 +27,7 @@ const tableData: TableData[] = [
   },
 ];
 
-export function Index() {
+export function Index({ pageProps }: { pageProps: any }) {
   return (
     <section className="max-w-7xl mx-auto py-6 px-4 flex flex-col items-center justify-center">
       <div className="flex flex-col items-center justify-center max-w-2xl">
@@ -97,7 +97,7 @@ export function Index() {
       </Button>
       <h3 className="mt-2">The component below comes from the remote app:</h3>
       <div className="mt-4 border-4 border-dashed border-rose-500 p-8 rounded-lg w-full">
-        <Table data={tableData} />
+        <Table data={tableData} envVar={pageProps.envVar} />
       </div>
       <h3 className="mt-4 text-center">
         The component below should be called from

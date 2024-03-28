@@ -4,7 +4,7 @@ import { StyledEngineProvider } from '@mui/material';
 import { init } from '@module-federation/runtime'
 import './globals.css';
 
-const getPlugin = (envVars: Record<string, string>) => {
+const getPlugin = (envVar: string) => {
   return { 
     name: 'runtime-module-plugin', 
     beforeRequest(args: any) {
@@ -14,10 +14,10 @@ const getPlugin = (envVars: Record<string, string>) => {
       // For this example it runs through all of the remotes in search of a match to replace
       args.options.remotes.forEach((remote: any) => {
         // Matches and replaces with whatever you want
-        if (envVars.NEXT_PUBLIC_REMOTE_URL && 'entry' in remote) {
+        if (envVar && 'entry' in remote) {
           remote.entry = remote.entry.replace(
             'https://[environment]',
-            envVars.NEXT_PUBLIC_REMOTE_URL,
+            envVar,
           );
         }
       });
@@ -31,7 +31,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   init({
     name: 'host',
     remotes: [],
-    plugins: [getPlugin(pageProps.envVars)]
+    plugins: [getPlugin(pageProps.envVar)]
   });
 
   return (
